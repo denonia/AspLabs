@@ -1,3 +1,6 @@
+using Lab2.Controllers;
+using Lab2.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,7 +10,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddSingleton<CompanyService>();
+
 var app = builder.Build();
+
+builder.Configuration.AddIniFile("Properties/companies.ini");
+builder.Configuration.AddXmlFile("Properties/companies.xml");
+builder.Configuration.AddJsonFile("Properties/companies.json");
+builder.Configuration.AddJsonFile("Properties/aboutme.json");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -21,5 +31,10 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.Map("/", (IConfiguration appConfig) =>
+{
+    Console.WriteLine(appConfig.GetSection("Microsoft").GetSection("Employees").Value);
+});
 
 app.Run();

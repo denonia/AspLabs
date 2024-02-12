@@ -1,0 +1,17 @@
+﻿{
+  "Microsoft": {
+    "Employees": 238000,
+    "FoundedYear": 1975,
+    "CEO": "Satya Nadella"
+  },
+  "Apple": {
+    "Employees": 161000,
+    "FoundedYear": 1976,
+    "CEO": "Tim Cook"
+  },
+  "Google": {
+    "Employees": 156500,
+    "FoundedYear": 1998,
+    "CEO": "Sundar Pichai"
+  }
+}

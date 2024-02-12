@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Companies>
+    <Microsoft>
+        <Employees>238000</Employees>
+        <FoundedYear>1975</FoundedYear>
+        <CEO>Satya Nadella</CEO>
+    </Microsoft>
+
+    <Apple>
+        <Employees>161000</Employees>
+        <FoundedYear>1976</FoundedYear>
+        <CEO>Tim Cook</CEO>
+    </Apple>
+
+    <Google>
+        <Employees>156500</Employees>
+        <FoundedYear>1998</FoundedYear>
+        <CEO>Sundar Pichai</CEO>
+    </Google>
+</Companies>
