@@ -1,3 +1,5 @@
+using Lab1;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -21,5 +23,23 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+var company = new Company
+{
+    Name = "Apple",
+    FoundedAt = new DateOnly(1976, 1, 1),
+    FounderName = "Steve Jobs",
+    EmployeeCount = 161000
+};
+
+// app.Run(async (context) =>
+// {
+//     await context.Response.WriteAsJsonAsync(company);
+// });
+
+app.Run(async (context) =>
+{
+    await context.Response.WriteAsync(Random.Shared.Next(0, 100).ToString());
+});
 
 app.Run();
