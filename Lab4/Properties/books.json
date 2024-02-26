@@ -1,0 +1,22 @@
+﻿{
+  "Books": [
+    {
+      "Id": 1,
+      "Title": "And Then There Were None",
+      "Author": "Agatha Christie",
+      "Year": 1939
+    },
+    {
+      "Id": 2,
+      "Title": "Alice's Adventures in Wonderland",
+      "Author": "Lewis Carroll",
+      "Year": 1865
+    },
+    {
+      "Id": 3,
+      "Title": "Ulysses",
+      "Author": "James Joyce",
+      "Year": 1922
+    }
+  ]
+}
