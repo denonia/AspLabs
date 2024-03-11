@@ -1,0 +1,13 @@
+﻿@model ConfirmOrderViewModel
+
+@{
+}
+
+<h1 class="display-4">Order successful</h1>
+
+@foreach (var product in Model.Products)
+{
+    <p>
+        <strong>@product.Title</strong> - @product.Amount
+    </p>
+}

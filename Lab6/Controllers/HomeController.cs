@@ -13,9 +13,9 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult Index([FromQuery] int? age)
     {
-        return View();
+        return View(new IndexViewModel(age));
     }
 
     public IActionResult Privacy()
