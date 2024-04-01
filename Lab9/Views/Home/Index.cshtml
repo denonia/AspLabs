@@ -1,8 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+
+    var products = new List<Product>
+    {
+        new Product(1, "iPhone 123", 1234.5m),
+        new Product(2, "Pringles Cheese", 9.99m),
+        new Product(3, "RTX 4080", 789.0m)
+    };
+
+    var lat = 52.52;
+    var lon = 13.41;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@await Component.InvokeAsync("ProductsListComponent", products)
+
+@await Component.InvokeAsync("WeatherComponent", new {lat, lon})
