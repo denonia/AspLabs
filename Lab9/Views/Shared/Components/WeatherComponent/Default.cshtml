@@ -1,0 +1,7 @@
+﻿@model WeatherResult
+
+<p>Weather for <strong>@Model.Latitude, @Model.Longitude</strong></p>
+
+<p>Time: @Model.Current.Time @Model.Timezone</p>
+<p>Temperature: @Model.Current.Temperature2m @Model.CurrentUnits.Temperature2m</p>
+<p>Wind speed: @Model.Current.WindSpeed10m @Model.CurrentUnits.WindSpeed10m</p>
