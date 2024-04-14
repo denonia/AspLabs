@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using Lab11.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Lab11.Models;
 
@@ -13,11 +14,13 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    [ActionLogFilter]
     public IActionResult Index()
     {
         return View();
     }
 
+    [ActionLogFilter]
     public IActionResult Privacy()
     {
         return View();
