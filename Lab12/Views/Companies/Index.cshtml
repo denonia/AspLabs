@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Company>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Year Established</th>
+        <th scope="col">Location</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var company in Model)
+    {
+        <tr>
+            <th scope="row">@company.Id</th>
+            <td>@company.Name</td>
+            <td>@company.YearEstablished</td>
+            <td>@company.Location</td>
+        </tr>
+    }
+    </tbody>
+</table>
